@@ -78,13 +78,13 @@ function create_post(){
         $post_content = $_POST['content'];
         $post_status = $_POST['status'];
 
-        $date = date('D, d M Y H:i:s');
+        $date = date('D, d M Y');
 
         $post_views = 0;
         $post_comment_count = 0;
 
         if (isset($_FILES['image'])) {
-            $dir = "../images/";
+            $dir = "../images";
             $target_file = $dir.basename($_FILES['image']['name']);
             if (move_uploaded_file($_FILES['image']['tmp_name'],$target_file)) {
                 echo "Image uploaded successfilly" ."";
@@ -130,25 +130,25 @@ function show_post(){
         $post_comment_count = $row['post_comment_count'];
 
         echo "<tr>";
-        echo "<td>{$post_id}</td>";
+        // echo "<td>{$post_id}</td>";
         echo "<td>{$post_title}</td>";
         echo "<td>{$post_author}</td>";
         echo "<td>{$post_category}</td>";
         echo "<td>{$post_status}</td>";
-        echo "<td><img src='images/{$post_content}' width='50px'></td>";
-        echo "<td>{$post_content}</td>";
+        echo "<td><img src='images{$post_content}' width='50px'></td>";
+        // echo "<td>{$post_content}</td>";
         echo "<td>{$date}</td>";
         echo "<td>{$post_tags}</td>";
         echo "<td>{$post_views}</td>";
         echo "<td>{$post_comment_count}</td>";
-        echo "<td><a href='post.php?approve=$post_id'>Approve</a></td>";
-        echo "<td><a href='post.php?unapprove=$post_id'>Unapprove</a></td>";
+       
+        // echo "<td><a href='post.php?approve=$post_id'>Approve</a></td>";
+        // echo "<td><a href='post.php?unapprove=$post_id'>Unapprove</a></td>";
         echo "<td><a href='post.php?edit=$post_id'>Edit</a></td>";
         echo "<td><a href='post.php?delete=$post_id'>Delete</a></td>";
-        
         echo "</tr>";
         
     }
 }
 
-?>
+?> 
