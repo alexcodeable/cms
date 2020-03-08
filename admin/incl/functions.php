@@ -111,7 +111,7 @@ create_post();
 
 function show_post(){
     global $connection;
-    $query = "SELECT * FROM post";
+    $query = "SELECT * FROM posts";
     $result = mysqli_query($connection, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
@@ -132,25 +132,23 @@ function show_post(){
         echo "<tr>";
         echo "<td>{$post_id}</td>";
         echo "<td>{$post_title}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
-        echo "<td>{}</td>";
+        echo "<td>{$post_author}</td>";
+        echo "<td>{$post_category}</td>";
+        echo "<td>{$post_status}</td>";
+        echo "<td><img src='images/{$post_content}' width='50px'></td>";
+        echo "<td>{$post_content}</td>";
+        echo "<td>{$date}</td>";
+        echo "<td>{$post_tags}</td>";
+        echo "<td>{$post_views}</td>";
+        echo "<td>{$post_comment_count}</td>";
+        echo "<td><a href='post.php?approve=$post_id'>Approve</a></td>";
+        echo "<td><a href='post.php?unapprove=$post_id'>Unapprove</a></td>";
+        echo "<td><a href='post.php?edit=$post_id'>Edit</a></td>";
+        echo "<td><a href='post.php?delete=$post_id'>Delete</a></td>";
+        
         echo "</tr>";
+        
     }
 }
 
-show_post();
 ?>
