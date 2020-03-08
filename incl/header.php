@@ -1,3 +1,6 @@
+<?php include "admin/incl/db.php" ?>
+<?php include "functions.php" ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,5 +20,6 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
   <body>

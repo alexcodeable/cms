@@ -163,7 +163,6 @@ table.tablesorter thead tr th:hover {
 
 }
 
-
-i{
-  font-size: large;
+.darker{
+  background-color: #999999;
 }
