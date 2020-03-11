@@ -38,7 +38,7 @@ $res = mysqli_query($connection, $sql);
 
                     <div class="form-group">
                         <label for="">Post Content</label>
-                        <textarea name="content" class="form-control ckeditor" id="" cols="30" rows="10"></textarea>
+                        <textarea name="content" class="form-control ckeditor" id="" cols="30" rows="15"></textarea>
                     </div>
 
                     <div class="form-group">

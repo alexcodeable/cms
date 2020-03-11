@@ -3,7 +3,6 @@
     <div class="wrap">
 
 <?php include 'incl/navigation.php'; ?>
-
       <!-- END header -->
 
 
@@ -19,7 +18,7 @@
           <div class="row blog-entries">
             <div class="col-md-12 col-lg-8 main-content">
               <div class="row">
-                <?php include 'incl/post.php'; ?>
+                <?php include 'incl/search_post.php'; ?>
               </div>
 
             </div>

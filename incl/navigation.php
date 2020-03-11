@@ -10,9 +10,9 @@
               </div>
               <div class="col-3 search-top">
                 <!-- <a href="#"><span class="fa fa-search"></span></a> -->
-                <form action="#" class="search-top-form">
+                <form action="search.php" method="POST" class="search-top-form">
                   <span class="icon fa fa-search"></span>
-                  <input type="text" id="s" placeholder="Type keyword to search...">
+                  <input type="text" name="search" id="s" placeholder="Search blog">
                 </form>
               </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
               <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="index.html">Home</a>
+                  <a class="nav-link active" href="index.php"> <i class="fa fa-home" aria-hidden="true"></i>Home</a>
                 </li>
                 <!-- <li class="nav-item">
                   <a class="nav-link" href="#">Business</a>

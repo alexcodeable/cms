@@ -108,7 +108,7 @@ function create_post(){
 
 create_post();
 
-
+// SHOW POST SECTION
 function show_post(){
     global $connection;
     $query = "SELECT * FROM posts";
@@ -121,7 +121,7 @@ function show_post(){
         $post_author = $row['post_author'];
         $post_category = $row['post_category'];
         $post_tags = $row['post_tags'];
-        $post_content = $row['post_content'];
+        $post_image = $row['post_image'];
         $post_status = $row['post_status'];
 
         $date = $row['post_date'];
@@ -135,7 +135,7 @@ function show_post(){
         echo "<td>{$post_author}</td>";
         echo "<td>{$post_category}</td>";
         echo "<td>{$post_status}</td>";
-        echo "<td><img src='images{$post_content}' width='50px'></td>";
+        echo "<td><img src='images/{$post_image}' width='50px'></td>";
         // echo "<td>{$post_content}</td>";
         echo "<td>{$date}</td>";
         echo "<td>{$post_tags}</td>";
