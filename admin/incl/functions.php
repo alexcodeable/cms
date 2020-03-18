@@ -74,6 +74,7 @@ function create_post(){
         $post_title = $_POST['title'];
         $post_author = $_POST['author'];
         $post_category = $_POST['category'];
+        $post_category_id = $_POST['category_id'];
         $post_tags = $_POST['tags'];
         $post_content = $_POST['content'];
         $post_status = $_POST['status'];
@@ -93,8 +94,8 @@ function create_post(){
             }
            
         }
-        $query = "INSERT INTO posts(post_title,post_author,post_category,post_tags,post_content,post_status,post_image,post_views,post_comment_count,post_date)
-        VALUES('$post_title','$post_author','$post_category','$post_tags','$post_content','$post_status','$target_file','$post_views','$post_comment_count','$date')";
+        $query = "INSERT INTO posts(post_title,post_author,post_category,post_tags,post_content,post_status,post_image,post_views,post_comment_count,post_date,post_category_id)
+        VALUES('$post_title','$post_author','$post_category','$post_tags','$post_content','$post_status','$target_file','$post_views','$post_comment_count','$date','$post_category_id')";
 
         $result = mysqli_query($connection, $query);
         if (!$result) {
@@ -111,11 +112,10 @@ create_post();
 // SHOW POST SECTION
 function show_post(){
     global $connection;
-    $query = "SELECT * FROM posts";
+    $query = "SELECT * FROM posts ORDER BY post_id DESC LIMIT 10";
     $result = mysqli_query($connection, $query);
 
     while ($row = mysqli_fetch_assoc($result)) {
-
         $post_id = $row['post_id'];
         $post_title = $row['post_title'];
         $post_author = $row['post_author'];

@@ -15,7 +15,7 @@
             </ol>
             
           </div>
-        </div><!-- /.row -->
+        </div>
 
         <div class="row">
           <div class="col-lg-3">
@@ -31,7 +31,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#">
+              <a href="post.php?source=">
                 <div class="panel-footer announcement-bottom">
                   <div class="row">
                     <div class="col-xs-6">

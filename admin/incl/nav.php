@@ -20,7 +20,7 @@
               <a href="post.php" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-paper-plane"></i> Post <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="adjust" >  <a href="post.php?source="> <i class="fa fa-eye" aria-hidden="true"></i> View Post</a></li>
-                <li class="adjust"> <a href="post.php?source=create_post"> <i class="fa fa-edit"></i> Create New Post</a></li>
+                <li class="adjust"> <a href="post.php?source=create_post"> <i class="fa fa-edit"></i> Add New Post</a></li>
                 <!-- <li><a href="#">Third Item</a></li>
                 <li><a href="#">Last Item</a></li> -->
               </ul>
@@ -52,7 +52,7 @@
               </ul>
             </li>
             <li class="dropdown user-dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/cms/images/person_1.jpg" class="rounded-circle" width="20px" height="20px" alt=""></i> John Smith <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                 <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>

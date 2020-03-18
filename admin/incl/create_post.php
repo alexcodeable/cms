@@ -37,6 +37,23 @@ $res = mysqli_query($connection, $sql);
                     </div>
 
                     <div class="form-group">
+                        <label for="">Post Category ID</label>
+                    <select name='category_id' class="form-control" id="">
+                        <?php
+                        $sql = "SELECT * FROM categories";
+                        $res = mysqli_query($connection, $sql);
+                            while ($row = mysqli_fetch_array($res)) {
+                                $cat_id = $row['cat_id'];
+                                $cat_title = $row['cat_title'];
+                                echo "<option value='$cat_id'>$cat_id - $cat_title</option>";
+                            }
+                        ?>
+                    </select>
+                    </div>
+
+                  
+
+                    <div class="form-group">
                         <label for="">Post Content</label>
                         <textarea name="content" class="form-control ckeditor" id="" cols="30" rows="15"></textarea>
                     </div>
@@ -73,7 +90,7 @@ $res = mysqli_query($connection, $sql);
     <script src="js/jquery-1.10.2.js"></script>
 
     <!-- ckeditor5 -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script> -->
 
     <script src="js/bootstrap.js"></script>
 

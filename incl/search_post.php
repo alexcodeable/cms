@@ -5,10 +5,12 @@ if (isset($_POST['search'])) {
     $query = "SELECT * FROM posts WHERE post_tags LIKE '%$search%' OR post_title LIKE '%$search%' ";
     $result = mysqli_query($connection, $query);
     $found = mysqli_num_rows($result);
+
+  
     
 
     if ($found == 0) {
-        echo "<div class='alert alert-info' >NO SEARCH RESULT FOUND!</div>";
+        echo "<img src='images/404.png' width='100%' alt='' class=''>";
     }else {
         while ($row = mysqli_fetch_assoc($result)) {
 
@@ -25,10 +27,14 @@ if (isset($_POST['search'])) {
           
             $post_views = $row['post_views'];
             $post_comment_count = $row['post_comment_count'];
+
+            
+           
           ?>
           
           
-          <div class="col-md-6">
+          
+                      <div class="col-md-6">
                             <a href="blog-single.php?post=<?php echo $post_title ?>" class="blog-entry element-animate" data-animate-effect="fadeIn">
                             <img src="admin/images/<?php echo $post_image ?>" width="800px" height="250px" class="image-fluid" alt="">
                               <div class="blog-content-body">
@@ -42,6 +48,8 @@ if (isset($_POST['search'])) {
                               </div>
                             </a>
                           </div>
+
+                          
           
           <?php
           }
@@ -54,3 +62,4 @@ if (isset($_POST['search'])) {
 
 
 ?>
+ <?php include 'incl/relatedpost.php'; ?>
